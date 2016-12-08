@@ -36,16 +36,14 @@ SELECT player, teamid, coach, gtime
 ####Sixth Question:
 ```sql
 SELECT mdate, teamname 
-  FROM game JOIN eteam ON (team1=eteam.id)
-WHERE team1 =
-  (SELECT eteam.id FROM eteam
-WHERE coach = 'Fernando Santos')
+  FROM game JOIN eteam ON team1=eteam.id
+WHERE coach = 'Fernando Santos'
 ```
 
 ####Seventh Question:
 ```sql
 SELECT player FROM goal
-  JOIN game ON (matchid = id)
+  JOIN game ON matchid = id
 WHERE stadium = 'National Stadium, Warsaw';
 ```
 =======================
